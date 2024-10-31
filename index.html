@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get GridScore NEXT</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <script defer data-domain="ics.hutton.ac.uk/get-gridscore" src="https://plausible.hutton.ac.uk/js/plausible.js"></script>
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+
+<body id="top">
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
+
+
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+
+            <div class="row s-header__inner">
+
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo.svg" alt="Homepage">
+                        </a>
+                    </div>
+
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
+
+                <nav class="s-header__nav">
+    
+                    <ul class="s-header__menu-links">
+                        <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
+                        <li><a href="#about" class="smoothscroll">About</a></li>
+                        <li><a href="#services" class="smoothscroll">Features</a></li>
+                        <li><a href="#folio" class="smoothscroll">Showcase</a></li>
+                        <li><a href="#footer" class="smoothscroll">Download</a></li>
+                    </ul> <!-- s-header__menu-links -->
+
+                    <ul class="s-header__social">
+                        <li>
+                            <a href="https://play.google.com/store/apps/details?id=uk.ac.hutton.gridscore">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-android2"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="m10.213 1.471.691-1.26q.069-.124-.048-.192-.128-.057-.195.058l-.7 1.27A4.8 4.8 0 0 0 8.005.941q-1.032 0-1.956.404l-.7-1.27Q5.281-.037 5.154.02q-.117.069-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.7 3.7 0 0 0 3.5 5.02h9q0-1.125-.623-2.072a4.27 4.27 0 0 0-1.664-1.476ZM6.22 3.303a.37.37 0 0 1-.267.11.35.35 0 0 1-.263-.11.37.37 0 0 1-.107-.264.37.37 0 0 1 .107-.265.35.35 0 0 1 .263-.11q.155 0 .267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264m4.101 0a.35.35 0 0 1-.262.11.37.37 0 0 1-.268-.11.36.36 0 0 1-.112-.264q0-.154.112-.265a.37.37 0 0 1 .268-.11q.155 0 .262.11a.37.37 0 0 1 .107.265q0 .153-.107.264M3.5 11.77q0 .441.311.75.311.306.76.307h.758l.01 2.182q0 .414.292.703a.96.96 0 0 0 .7.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182q0 .414.292.703a.97.97 0 0 0 .71.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76q.436 0 .749-.308.31-.307.311-.75V5.365h-9zm10.495-6.587a.98.98 0 0 0-.702.278.9.9 0 0 0-.293.685v4.063q0 .406.293.69a.97.97 0 0 0 .702.284q.42 0 .712-.284a.92.92 0 0 0 .293-.69V6.146a.9.9 0 0 0-.293-.685 1 1 0 0 0-.712-.278m-12.702.283a1 1 0 0 1 .712-.283q.41 0 .702.283a.9.9 0 0 1 .293.68v4.063a.93.93 0 0 1-.288.69.97.97 0 0 1-.707.284 1 1 0 0 1-.712-.284.92.92 0 0 1-.293-.69V6.146q0-.396.293-.68" />
+                                </svg>
+                                <span class="u-screen-reader-text">Android</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://gridscore.hutton.ac.uk">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                                </svg>
+                                <span class="u-screen-reader-text">Web</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/GerminateHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                                </svg>
+                                <span class="u-screen-reader-text">Twitter</span>
+                            </a>
+                        </li>
+                    </ul> <!-- s-header__social -->
+    
+                </nav> <!-- end s-header__nav -->
+
+            </div> <!-- end s-header__inner -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- # site-content
+        ================================================== -->
+        <section id="content" class="s-content">
+
+
+            <!-- intro
+            ----------------------------------------------- -->
+            <section id="intro" class="s-intro target-section">
+
+                <div class="s-intro__bg"></div>
+
+                <div class="row s-intro__content">
+
+                    <div class="s-intro__content-bg"></div>
+
+                    <div class="column lg-12 s-intro__content-inner">
+                        
+                        <h1 class="s-intro__content-title">
+                        <strong>GridScore NEXT </strong><br>
+                        Mobile plant phenotyping <br>
+                        at your fingertips.
+                        </h1>
+
+                        <div class="s-intro__content-buttons">
+                            <a href="#footer" class="btn btn--stroke s-intro__content-btn smoothscroll">Download GridScore</a>
+                            <a href="https://www.youtube.com/embed/Nq6rKtTWDBU?si=t13UWSOakRFZc5UZ" class="s-intro__content-video-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M7 6v12l10-6z"></path></svg>
+                            </a>
+                        </div>
+                        
+                    </div> <!-- s-intro__content-inner -->
+
+                </div> <!-- s-intro__content -->
+
+                <div class="s-intro__scroll-down">
+                    <a href="#about" class="smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div> <!-- s-intro__scroll-down -->
+
+            </section> <!-- end s-intro -->
+
+
+            <!-- about
+            ----------------------------------------------- -->
+            <section id="about" class="s-about target-section">
+
+                <div class="row section-header" data-num="01">
+                    <h3 class="column lg-12 section-header__pretitle pretitle text-pretitle">What it is</h3>
+                    <div class="column lg-6 stack-on-1100 section-header__primary">
+                        <h2 class="title text-display-1">
+                        GridScore is a cross-platform open-source phenotyping app that combines barcode-based systems with a guided data
+                        collection approach while offering a top-down view onto the data collected in a field layout.
+                        </h2>
+                    </div>
+                    <div class="column lg-6 stack-on-1100 section-header__secondary">
+                        <p class="desc">
+                        GridScore bundles a huge amount of functionalities into a small app empowering your data collection in the field, glasshouse or out and about. Once a trial has been created, GridScore works completely offline, so no data connectivity is required for both data collection and visualization.
+                        </p>
+                    </div>
+                </div> <!-- end section-header -->
+
+                <div class="row process-list list-block show-ctr block-lg-one-half block-tab-whole">
+    
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <h3 class="h5">Create</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Easily create trials on your laptop by importing information from different sources. Define your trial layout and trait definitions. Share the created trial with collaborators or data collectors using QR codes.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <h3 class="h5">Collect</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Efficiently and accurately collect phenotypic data for large plot trials. Utilise barcodes or guided walks to navigate the trial. Synchronize data collection between multiple users.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+        
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <h3 class="h5">Visualize</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Gain insights into your data with heatmaps, box plots and bar charts. Easily identify patterns, potential outliers and correlations. All while out in the field or back in your office.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+        
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <h3 class="h5">Export</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Export your data in a variety of formats for further processing. Breeding API (BrAPI) and Germinate Data Template support is built-in to simplify data transfer to other systems.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+
+                </div> <!-- end process-list -->
+
+            </section> <!-- end s-about -->
+
+
+            <!-- services
+            ----------------------------------------------- -->
+            <section id="services" class="s-services target-section">
+
+                <div class="row section-header" data-num="02">
+                    <h3 class="column lg-12 section-header__pretitle text-pretitle">What it does</h3>
+                    <div class="column lg-6 stack-on-1100 section-header__primary">
+                        <h2 class="title text-display-1">
+                            GridScore offers a wide range of functionalities.
+                        </h2>
+                    </div>
+                    <div class="column lg-6 stack-on-1100 section-header__secondary">
+                        <p class="desc">
+                        GridScore is feature-packed but beginner friendly at the same time catering to new and expert users.
+                        </p>
+                    </div>
+                </div> <!-- end section-header -->
+
+                <div class="row services-list list-block block-lg-one-half block-tab-whole">
+    
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <div class="list-block__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ui-checks-grid"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M2 10h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1m9-9h3a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-3a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 9a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm0-10a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM2 9a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h3a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2zm7 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2zM0 2a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm5.354.854a.5.5 0 1 0-.708-.708L3 3.793l-.646-.647a.5.5 0 1 0-.708.708l1 1a.5.5 0 0 0 .708 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="h5">Trial design</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Import your own trial layout from other tools or use <a href="https://didiermurillof.github.io/FielDHub/">FielDHub</a> to create a layout. Simply transfer your design to GridScore. A variety of import formats are supported to ensure you get up and running quickly.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+        
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <div class="list-block__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-qr-code-scan"
+                                  viewBox="0 0 16 16">
+                                  <path
+                                    d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z" />
+                                  <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z" />
+                                  <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z" />
+                                  <path d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z" />
+                                  <path d="M12 9h2V8h-2z" />
+                                </svg>
+                            </div>
+                            <h3 class="h5">Data sharing</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            GridScore uses QR codes to easily share trials between collaborators and data collectors. Simply generate and scan QR codes to transfer all required information to another device. Collected data is kept synchronized between devices for data consistency.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+        
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <div class="list-block__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right"
+                                  viewBox="0 0 16 16">
+                                  <path fill-rule="evenodd"
+                                    d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5" />
+                                </svg>
+                            </div>
+                            <h3 class="h5">Guided walks</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Let GridScore guide you through the trial in one of 16 pre-defined orders. Collect data for a plot, then move on to the next one in the order. Audio feedback will instruct you to turn when required.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+        
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <div class="list-block__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill"
+                                  viewBox="0 0 16 16">
+                                  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                                </svg>
+                            </div>
+                            <h3 class="h5">Georeferencing</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Quickly validate your location in the trial using GPS information. Keep track of your movement as you walk through the trial. Recorded data is geotagged for future reference.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <div class="list-block__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill"
+                                  viewBox="0 0 16 16">
+                                  <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                                  <path
+                                    d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0" />
+                                </svg>
+                            </div>
+                            <h3 class="h5">Image tagging</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Take photos of plots, plants or anything else as you collect data. Photos are automatically tagged with timestamp, GPS location and, optionally, any traits.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+        
+                    <div class="column list-block__item">
+                        <div class="list-block__title">
+                            <div class="list-block__icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill"
+                                  viewBox="0 0 16 16">
+                                  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+                                  <path
+                                    d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+                                </svg>
+                            </div>
+                            <h3 class="h5">Audio comments and feedback</h3>
+                        </div>
+                        <div class="list-block__text">
+                            <p>
+                            Record trial or plot comments with your voice. Speech recognition will do the rest. Audio feedback is used throughout the app to give you immediate feedback on collected data or selected plots.
+                            </p>
+                        </div>
+                    </div> <!-- end list-block__item -->
+        
+                </div> <!-- end process-list -->
+
+            </section> <!-- end s-services -->
+
+
+            <!-- portfolio
+            ----------------------------------------------- -->
+            <section id="folio" class="s-folio target-section">
+
+                <div class="row section-header light-on-dark" data-num="03">
+                    <h3 class="column lg-12 section-header__pretitle text-pretitle">What it looks like</h3>
+                    <div class="column lg-6 stack-on-1100 section-header__primary">
+                        <h2 class="title text-display-1">
+                            Here are some screenshots of GridScore in action. Feel free to check them out.
+                        </h2>
+                    </div>
+                    <div class="column lg-6 stack-on-1100 section-header__secondary">
+                        <p class="desc">
+                        Clicking on an image will give you more information about the shown feature or functionality.
+                        </p>
+                    </div>
+                </div> <!-- end section-header -->
+
+                <div id="bricks" class="row bricks">
+                    <div class="column lg-12 masonry">
+                        <div class="bricks-wrapper">
+
+                            <div class="grid-sizer"></div>
+
+                            <article class="brick brick--double entry">
+                                <a href="#modal-01" class="entry__link">
+                                    <div class="entry__thumb">
+                                        <img src="images/screenshots/fieldplan.png" alt="">
+                                    </div>
+                                    <div class="entry__info">
+                                        <div class="entry__cat">User interface</div>
+                                        <h4 class="entry__title">Field plan</h4>
+                                    </div>
+                                </a>
+                            </article> <!-- entry -->
+
+                            <article class="brick brick--double entry">
+                                <a href="#modal-02" class="entry__link">
+                                    <div class="entry__thumb">
+                                        <img src="images/screenshots/datainput.png" alt="">
+                                    </div>
+                                    <div class="entry__info">
+                                        <div class="entry__cat">Data collection</div>
+                                        <h4 class="entry__title">Trait data input</h4>
+                                    </div>
+                                </a>
+                            </article> <!-- entry -->
+
+                            <article class="brick brick--double entry">
+                              <a href="#modal-04" class="entry__link">
+                                <div class="entry__thumb">
+                                  <img src="images/screenshots/boxplot.png" alt="">
+                                </div>
+                                <div class="entry__info">
+                                  <div class="entry__cat">Data visualization</div>
+                                  <h4 class="entry__title">Box plots</h4>
+                                </div>
+                              </a>
+                            </article> <!-- entry -->
+
+                            <article class="brick entry">
+                                <a href="#modal-03" class="entry__link">
+                                    <div class="entry__thumb">
+                                        <img src="images/screenshots/heatmap.png" alt="">
+                                    </div>
+                                    <div class="entry__info">
+                                        <div class="entry__cat">Data visualization</div>
+                                        <h4 class="entry__title">Heatmap</h4>
+                                    </div>
+                                </a>
+                            </article> <!-- entry -->
+
+                            <article class="brick entry">
+                                <a href="#modal-05" class="entry__link">
+                                    <div class="entry__thumb">
+                                        <img src="images/screenshots/timeline.png" alt="">
+                                    </div>
+                                    <div class="entry__info">
+                                        <div class="entry__cat">Data visualization</div>
+                                        <h4 class="entry__title">Timeline chart</h4>
+                                    </div>
+                                </a>
+                            </article> <!-- entry -->
+
+                            <article class="brick entry">
+                                <a href="#modal-06" class="entry__link">
+                                    <div class="entry__thumb">
+                                        <img src="images/screenshots/map.png" alt="">
+                                    </div>
+                                    <div class="entry__info">
+                                        <div class="entry__cat">Data visualization</div>
+                                        <h4 class="entry__title">Map</h4>
+                                    </div>
+                                </a>
+                            </article> <!-- entry -->
+
+                            <article class="brick entry">
+                              <a href="#modal-07" class="entry__link">
+                                <div class="entry__thumb">
+                                  <img src="images/screenshots/trialselector.png" alt="">
+                                </div>
+                                <div class="entry__info">
+                                  <div class="entry__cat">User interface</div>
+                                  <h4 class="entry__title">Trial selection</h4>
+                                </div>
+                              </a>
+                            </article> <!-- entry -->
+
+                        </div> <!-- end bricks-wrapper -->
+                    </div> <!-- end masonry -->
+                </div> <!-- end bricks -->
+
+
+                <!-- modal templates popup
+                -------------------------------------------- -->
+                <div id="modal-01" hidden>
+                    <div class="modal-popup">
+                        <img src="images/screenshots/fieldplan.png" alt="">
+            
+                        <div class="modal-popup__desc">
+                            <h5>Field plan</h5>
+                            <p>The main data view of GridScore is a visual representation of the field trial. Each cell represents a plot and the coloured circles represent the traits. Filled circles indicate data that has been collected while empty circles show missing data.</p>
+                            <ul class="modal-popup__cat">
+                                <li>User interface</li>
+                            </ul>
+                        </div>
+            
+                        <a href="https://gridscore.hutton.ac.uk/#/load-example" class="modal-popup__details">Load example trial</a>
+                    </div>
+                </div> <!-- end modal -->
+
+                <div id="modal-02" hidden>
+                    <div class="modal-popup">
+                        <img src="images/screenshots/datainput.png" alt="">
+            
+                        <div class="modal-popup__desc">
+                            <h5>Data input</h5>
+                            <p>Data is collected for the defined traits based on their data type. In this example we see date-based traits. The data input field will allow you to pick from a calendar or you can use the arrow buttons to the side to step through time.</p>
+                            <ul class="modal-popup__cat">
+                                <li>Data collection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- end modal -->
+
+                <div id="modal-03" hidden>
+                    <div class="modal-popup">
+                        <img src="images/screenshots/heatmap.png" alt="">
+            
+                        <div class="modal-popup__desc">
+                            <h5>Heatmap</h5>
+                            <p>Heatmaps are a useful tool in the identification of patterns in your data or spotting outliers. The heatmap on the left represents the field layout where darker shades show a later "awn tipping" date. The right shows a replicate heatmap plotting reps against each other to spot errors.</p>
+                            <ul class="modal-popup__cat">
+                                <li>Data visualization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- end modal -->
+
+                <div id="modal-04" hidden>
+                    <div class="modal-popup">
+                        <img src="images/screenshots/boxplot.png" alt="">
+            
+                        <div class="modal-popup__desc">
+                            <h5>Box plots</h5>
+                            <p>Box plots provide an overview over the data distribution for a trait. This can highlight potential issues with the data that has been collected in the form of outliers, but box plots can also just give you an indication of the overall performance of the trial.</p>
+                            <ul class="modal-popup__cat">
+                                <li>Data visualization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- end modal -->
+
+                <div id="modal-05" hidden>
+                    <div class="modal-popup">
+
+                        <img src="images/screenshots/timeline.png" alt="">
+            
+                        <div class="modal-popup__desc">
+                            <h5>Timeline charts</h5>
+                            <p>If trait data is collected multiple times over time, GridScore can show the development of each plot for a certain trait as time progresses. This can highlight which plots have the fastest/slowest gain/loss within the trait as well as when certain events may have taken place.</p>
+                            <ul class="modal-popup__cat">
+                                <li>Data visualization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- end modal -->
+
+                <div id="modal-06" hidden>
+                    <div class="modal-popup">
+                        <img src="images/screenshots/map.png" alt="">
+            
+                        <div class="modal-popup__desc">
+                            <h5>Map</h5>
+                            <p>If the corner points of the trial have been defined, GridScore can draw the location of each individual plot on a map. Your current location will be highlighted and clicking on a plot shows all data collected for this plot.</p>
+                            <ul class="modal-popup__cat">
+                                <li>Data visualization</li>
+                                <li>Data collection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- end modal -->
+
+                <div id="modal-07" hidden>
+                  <div class="modal-popup">
+                    <img src="images/screenshots/trialselector.png" alt="">
+                
+                    <div class="modal-popup__desc">
+                      <h5>Trial selector</h5>
+                      <p>Load multiple trials on your device and easily switch between them. Synchronize the collected data with collaborators, add traits or duplicate existing trials.
+                      </p>
+                      <ul class="modal-popup__cat">
+                        <li>Data visualization</li>
+                        <li>Data collection</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div> <!-- end modal -->
+
+
+                <!-- clients
+                -------------------------------------------- -->
+                <div class="s-clients row">
+                    <div class="column lg-12">
+
+                        <div class="row section-header">
+                            <div class="column lg-12">
+                                <h3 class="title text-display-1">Organisations supporting GridScore - past and present</h3>
+                            </div>
+                        </div> <!-- end section-header -->
+    
+                        <div class="row clients-list block-lg-one-fourth block-md-one-third block-tab-one-half block-stack">
+    
+                            <div class="column clients-list__item">
+                                <a href="https://www.hutton.ac.uk/">
+                                    <img src="images/funders/hutton.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="column clients-list__item">
+                                <a href="https://www.croptrust.org/">
+                                    <img src="images/funders/crop-trust.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="column clients-list__item">
+                                <a href="https://bold.croptrust.org/">
+                                    <img src="images/funders/bold.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="column clients-list__item">
+                                <a href="https://www.norad.no/en/">
+                                    <img src="images/funders/norad.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="column clients-list__item">
+                                <a href="https://www.regjeringen.no/en/dep/ud/id833/">
+                                    <img src="images/funders/norwegian-ministry-of-foreign-affairs.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="column clients-list__item">
+                                <a href="https://www.gov.scot/">
+                                    <img src="images/funders/scottish-government.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="column clients-list__item">
+                                <a href="https://www.barleyhub.org/">
+                                    <img src="images/funders/ibh.svg" alt="">
+                                </a>
+                            </div>
+
+                        </div> <!-- clients-list -->
+                    </div> <!-- end column lg-12 -->
+                </div> <!-- end s-clients -->
+
+            </section> <!-- end s-folio -->
+
+        </section>  <!-- end content -->
+
+
+        <!-- # site-footer
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section">
+
+            <div class="row section-header" data-num="04">
+                <h3 class="column lg-12 section-header__pretitle text-pretitle">Next steps</h3>
+                <div class="column lg-6 stack-on-1100 section-header__primary">
+                    <h2 class="title text-display-1">
+                    Have any suggestions or questions about GridScore? Want to collaborate with us? Talk to us.
+                    Let's work together and make something great. 
+                    Drop us a line at <a href="mailto:sebastian.raubach@hutton.ac.uk" title="GridScore">sebastian.raubach@hutton.ac.uk</a>
+                    </h2>
+                </div>    
+                <div class="column lg-6 stack-on-1100 section-header__secondary">
+                    
+                    <div class="contact-block">
+                        <h6>GridScore links</h6>
+                        <p>
+                        <a href="https://play.google.com/store/apps/details?id=uk.ac.hutton.gridscore" class="btn btn--primary u-fullwidth"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-android2"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="m10.213 1.471.691-1.26q.069-.124-.048-.192-.128-.057-.195.058l-.7 1.27A4.8 4.8 0 0 0 8.005.941q-1.032 0-1.956.404l-.7-1.27Q5.281-.037 5.154.02q-.117.069-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.7 3.7 0 0 0 3.5 5.02h9q0-1.125-.623-2.072a4.27 4.27 0 0 0-1.664-1.476ZM6.22 3.303a.37.37 0 0 1-.267.11.35.35 0 0 1-.263-.11.37.37 0 0 1-.107-.264.37.37 0 0 1 .107-.265.35.35 0 0 1 .263-.11q.155 0 .267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264m4.101 0a.35.35 0 0 1-.262.11.37.37 0 0 1-.268-.11.36.36 0 0 1-.112-.264q0-.154.112-.265a.37.37 0 0 1 .268-.11q.155 0 .262.11a.37.37 0 0 1 .107.265q0 .153-.107.264M3.5 11.77q0 .441.311.75.311.306.76.307h.758l.01 2.182q0 .414.292.703a.96.96 0 0 0 .7.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182q0 .414.292.703a.97.97 0 0 0 .71.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76q.436 0 .749-.308.31-.307.311-.75V5.365h-9zm10.495-6.587a.98.98 0 0 0-.702.278.9.9 0 0 0-.293.685v4.063q0 .406.293.69a.97.97 0 0 0 .702.284q.42 0 .712-.284a.92.92 0 0 0 .293-.69V6.146a.9.9 0 0 0-.293-.685 1 1 0 0 0-.712-.278m-12.702.283a1 1 0 0 1 .712-.283q.41 0 .702.283a.9.9 0 0 1 .293.68v4.063a.93.93 0 0 1-.288.69.97.97 0 0 1-.707.284 1 1 0 0 1-.712-.284.92.92 0 0 1-.293-.69V6.146q0-.396.293-.68" />
+                        </svg> Android app</a>
+                        <a href="https://gridscore.hutton.ac.uk" class="btn btn--primary u-fullwidth"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                        </svg> Web version</a>
+                        <a href="https://doi.org/10.1186/s12859-022-04755-2" class="btn btn--primary u-fullwidth"><svg data-v-a9838b16="" viewBox="0 0 16 16" width="1em" height="1em" focusable="false" role="img" aria-label="newspaper"
+                          xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi-newspaper display-1 p-2 b-icon bi">
+                          <g data-v-a9838b16="">
+                            <path
+                              d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z">
+                            </path>
+                            <path
+                              d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z">
+                            </path>
+                          </g>
+                        </svg> Publication</a>
+                        <a href="https://cropgeeks.github.io/gridscore-next-client/" class="btn btn--primary u-fullwidth"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-richtext"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z" />
+                          <path
+                            d="M4.5 12.5A.5.5 0 0 1 5 12h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5m0-2A.5.5 0 0 1 5 10h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5m1.639-3.708 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V8.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V8s1.54-1.274 1.639-1.208M6.25 6a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5" />
+                        </svg> Documentation</a>
+                    </div>
+                </div>
+            </div> <!-- end section-header -->
+
+            <div class="row s-footer__bottom">
+
+                <div class="column lg-6 tab-12 s-footer__bottom-left">
+                    <ul class="s-footer__social">
+                        <li>
+                          <a href="https://play.google.com/store/apps/details?id=uk.ac.hutton.gridscore">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-android2"
+                              viewBox="0 0 16 16">
+                              <path
+                                d="m10.213 1.471.691-1.26q.069-.124-.048-.192-.128-.057-.195.058l-.7 1.27A4.8 4.8 0 0 0 8.005.941q-1.032 0-1.956.404l-.7-1.27Q5.281-.037 5.154.02q-.117.069-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.7 3.7 0 0 0 3.5 5.02h9q0-1.125-.623-2.072a4.27 4.27 0 0 0-1.664-1.476ZM6.22 3.303a.37.37 0 0 1-.267.11.35.35 0 0 1-.263-.11.37.37 0 0 1-.107-.264.37.37 0 0 1 .107-.265.35.35 0 0 1 .263-.11q.155 0 .267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264m4.101 0a.35.35 0 0 1-.262.11.37.37 0 0 1-.268-.11.36.36 0 0 1-.112-.264q0-.154.112-.265a.37.37 0 0 1 .268-.11q.155 0 .262.11a.37.37 0 0 1 .107.265q0 .153-.107.264M3.5 11.77q0 .441.311.75.311.306.76.307h.758l.01 2.182q0 .414.292.703a.96.96 0 0 0 .7.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182q0 .414.292.703a.97.97 0 0 0 .71.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76q.436 0 .749-.308.31-.307.311-.75V5.365h-9zm10.495-6.587a.98.98 0 0 0-.702.278.9.9 0 0 0-.293.685v4.063q0 .406.293.69a.97.97 0 0 0 .702.284q.42 0 .712-.284a.92.92 0 0 0 .293-.69V6.146a.9.9 0 0 0-.293-.685 1 1 0 0 0-.712-.278m-12.702.283a1 1 0 0 1 .712-.283q.41 0 .702.283a.9.9 0 0 1 .293.68v4.063a.93.93 0 0 1-.288.69.97.97 0 0 1-.707.284 1 1 0 0 1-.712-.284.92.92 0 0 1-.293-.69V6.146q0-.396.293-.68" />
+                            </svg>
+                            <span class="u-screen-reader-text">Android</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://gridscore.hutton.ac.uk">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe"
+                              viewBox="0 0 16 16">
+                              <path
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z" />
+                            </svg>
+                            <span class="u-screen-reader-text">Web</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/GerminateHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter"
+                              viewBox="0 0 16 16">
+                              <path
+                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                            </svg>
+                            <span class="u-screen-reader-text">Twitter</span>
+                          </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="column lg-6 tab-12 s-footer__bottom-right">
+                    <div class="ss-copyright">
+                        <span>© Copyright Mueller 2022</span> 
+                        <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">ThemeWagon</a> </span>
+                    </div>
+                </div>
+
+            </div> <!-- s-footer__bottom -->
+    
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"></path></svg>
+                </a>
+            </div> <!-- end ss-go-top -->
+    
+        </footer> <!-- end footer -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
