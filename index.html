@@ -15,6 +15,9 @@
 
     <script defer data-domain="ics.hutton.ac.uk/get-gridscore" src="https://plausible.hutton.ac.uk/js/plausible.js"></script>
 
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-dsv@3.0.1/dist/d3-dsv.min.js"></script>
+
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="css/vendor.css">
@@ -68,7 +71,7 @@
                         <li><a href="#about" class="smoothscroll">About</a></li>
                         <li><a href="#services" class="smoothscroll">Features</a></li>
                         <li><a href="#folio" class="smoothscroll">Showcase</a></li>
-                        <li><a href="#footer" class="smoothscroll">Download</a></li>
+                        <li><a href="#links" class="smoothscroll">Download</a></li>
                     </ul> <!-- s-header__menu-links -->
 
                     <ul class="s-header__social">
@@ -645,11 +648,7 @@
 
         </section>  <!-- end content -->
 
-
-        <!-- # site-footer
-        ================================================== -->
-        <footer id="footer" class="s-footer target-section">
-
+        <section id="links" class="s-links target-section">
             <div class="row section-header" data-num="04">
                 <h3 class="column lg-12 section-header__pretitle text-pretitle">Next steps</h3>
                 <div class="column lg-6 stack-on-1100 section-header__primary">
@@ -695,6 +694,34 @@
                     </div>
                 </div>
             </div> <!-- end section-header -->
+        </section>
+
+        <section class="s-chart target-section">
+            <div class="row section-header light-on-dark" data-num="05">
+                <h3 class="column lg-12 section-header__pretitle text-pretitle">Trial durations</h3>
+                <div class="column lg-6 stack-on-1100 section-header__primary">
+                    <h2 class="title text-display-1">
+                        Get a feel for how actively used GridScore is.
+                    </h2>
+                </div>
+                <div class="column lg-6 stack-on-1100 section-header__secondary">
+                    <p class="desc">
+                    Below is a chart visualizing currently active trials and the duration they have run for. This is completely anonymous as the only information shown are starting date and the last time the trial has been updated. Only trials with an active duration of over 10 days are shown.
+                    </p>
+                    <p class="desc">Sort chart by</p>
+                    <button onclick="getData([{ field: 'updatedOn', asc: false, type: 'string' }, { field: 'duration', asc: false, type: 'number' }]);">Updated on</button>
+                    <button onclick="getData([{ field: 'createdOn', asc: false, type: 'string' }, { field: 'duration', asc: false, type: 'number' }]);">Created on</button>
+                    <button onclick="getData([{ field: 'duration', asc: false }, { field: 'updatedOn', asc: false, type: 'string' }]);">Duration</button>
+                </div>
+                <div class="chart-wrapper">
+                    <div id="trial-stats-chart" />
+                </div>
+            </div>
+        </section>
+
+        <!-- # site-footer
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section">
 
             <div class="row s-footer__bottom">
 
@@ -741,7 +768,8 @@
 
                 <div class="column lg-6 tab-12 s-footer__bottom-right">
                     <div class="ss-copyright">
-                        <span>© Copyright Mueller 2022</span> 
+                        <span>© Content: The James Hutton Institute <script>document.write(new Date().getFullYear())</script></span> 
+                        <span>© Theme: Copyright Mueller 2022</span>
                         <span>Design by <a href="https://www.styleshout.com/">StyleShout</a> Distribution By <a href="https://themewagon.com">ThemeWagon</a> </span>
                     </div>
                 </div>
@@ -762,5 +790,131 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        let d
+
+        async function getData (sortBy) {
+            if (!d) {
+                // const response = await fetch('http://localhost:8180/gridscore-next-api/v3.3.0/api/trial/stats')
+                // const response = await fetch('https://gridscore.pgcbase.org/api/trial/stats')
+                const response = await fetch('https://gridscore.hutton.ac.uk/api/trial/stats')
+                if (!response.ok) {
+                throw new Error(`Response status: ${response.status}`);
+                }
+
+                d = await response.json()
+            }
+
+            if (sortBy && sortBy.length > 0) {
+                d.sort((a, b) => {
+                    let result = 0
+
+                    sortBy.forEach(sb => {
+                        if (sb.type === 'string') {
+                            result ||= sb.asc ? (a[sb.field].localeCompare(b[sb.field])) : b[sb.field].localeCompare(a[sb.field])
+                        } else {
+                            result ||= sb.asc ? (a[sb.field] - b[sb.field]) : (b[sb.field] - a[sb.field])
+                        }
+                    })
+
+                    return result
+                })
+            }
+
+            d.forEach((dp, index) => {
+                dp.id = d.length - index
+            })
+
+            const y = d.map(dp => dp.id)
+            const start = d.map(dp => dp.createdOn)
+            const end = d.map(dp => dp.updatedOn)
+
+            const trace1 = {
+            type: 'scatter',
+            x: start,
+            y: y,
+            mode: 'markers',
+            name: '',
+            marker: {
+                color: '#00a0f1',
+                symbol: 'circle',
+                size: 16
+            }
+            }
+
+            const trace2 = {
+            x: end,
+            y: y,
+            mode: 'markers',
+            name: '',
+            marker: {
+                color: '#5ec418',
+                symbol: 'circle',
+                size: 16
+            }
+            }
+
+            const data = [trace1, trace2]
+
+            const layout = {
+                paper_bgcolor: 'transparent',
+                plot_bgcolor: 'transparent',
+                hovermode: 'y unified',
+                showlegend: false,
+                hoverlabel: {
+                    bgcolor: '#34495e',
+                    font: {
+                        color: 'white'
+                    }
+                },
+                yaxis: {
+                    fixedrange: true,
+                    zeroline: false,
+                    showline: false,
+                    dtick: 1,
+                    tickmode: 'linear',
+                    ticks: '',
+                    showticklabels: false,
+                    range: [0, y.length + 1],
+                    gridcolor: 'rgba(1.0, 1.0, 1.0, 0.1)',
+                },
+                xaxis: {
+                    fixedrange: true,
+                    side: 'top',
+                    showgrid: false,
+                    showline: true,
+                    linecolor: 'white',
+                    tickfont: {
+                        color: 'white'
+                    }
+                },
+                margin: { autoexpand: true },
+                autosize: true,
+                height: Math.max(500, y.length * 20),
+                shapes: y.map((yp, i) => {
+                    return {
+                    layer: 'between',
+                    type: 'line',
+                    x0: start[i],
+                    x1: end[i],
+                    y0: yp,
+                    y1: yp,
+                    line: {
+                        color: '#34495e',
+                        width: 6
+                    }
+                    }
+                })
+            }
+
+            Plotly.react('trial-stats-chart', data, layout, {
+                modeBarButtonsToRemove: ['toImage'],
+                displayModeBar: false,
+                responsive: true,
+                displaylogo: false
+            })
+        }
+        getData([{ field: 'updatedOn', asc: false, type: 'string' }, { field: 'duration', asc: false, type: 'number' }])
+        </script>
 </body>
 </html>
