@@ -1,0 +1,7 @@
+[{
+  "date": "2026-01-26",
+  "severity": "info",
+  "title": "Test the new GridScore version!",
+  "message": "We are looking for volunteers to give the next release of GridScore a trial run (pun intended). This new version includes many new features and improvements as well as some small changes to current workflows. If you're interested, please send a quick email to <a href='mailto:sebastian.raubach@hutton.ac.uk?subject=GridScore Beta Test'>Sebastian Raubach</a>.",
+  "maxVersion": "3.99.99"
+}]
